@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Music Artist Portfolio Docs</title>
+    <title>Karl Shots Documentation</title>
 
     <meta name="description" content="" />
     <meta name="author" content="Team Syntax" />
@@ -140,8 +140,8 @@
         <li><a href="#fonts" title="Fonts">Fonts</a></li>
         <li><a href="#icons" title="Icons">Icons</a></li>
         <li><a href="#logo" title="Logo">Logo</a></li>
-        <li><a href="#sliders" title="Sliders">Sliders</a></li>
-        <li><a href="#google_map" title="Google Map">Google Map</a></li>
+        <li><a href="#sliders" title="Sliders">Carousel</a></li>
+        <!-- <li><a href="#google_map" title="Google Map">Google Map</a></li> -->
         <li>
           <a href="#sources_and_credits" title="Sources and Credits"
             >Sources and Credits</a
@@ -155,13 +155,13 @@
     </div>
     <div id="documenter_content">
       <section id="documenter_cover">
-        <h1>Music Artist Portfolio</h1>
+        <h1>Karl Shots Photography Portfolio</h1>
         <h2>Responsive HTML5 Template and Bootstrap</h2>
         <div id="documenter_buttons"></div>
         <hr />
         <ul>
-          <li>created: 03/07/2020</li>
-          <li>latest update: 03/07/2020</li>
+          <li>created: 10/07/2020</li>
+          <li>latest update: 10/07/2020</li>
           <li>by: teamsyntax</li>
 
           <li>
@@ -309,21 +309,21 @@
         </div>
         <div>
           <pre class="prettyprint lang-html linenums">
-&lt;link href=&quot;https://font.googleapis.com....&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Mina&family=Montserrat:wght@400;500;700&display=swap&quot; rel=&quot;stylesheet&quot;&gt;
             </pre
           >
         </div>
         <p>&nbsp;</p>
         <div>
           <div>
-            To change the font, first go to http://www.google.com/webfonts
+            To change the font, first go to https://fonts.google.com
             choose a font and add the generated code to the top of global.css.
           </div>
           <div>
             &nbsp;
           </div>
           <div>
-            Then edit --header-font or --text-font in
+            Then edit --main-font or --review-font in
           </div>
           <div>
             &nbsp;
@@ -331,14 +331,11 @@
           <div>
             <pre class="prettyprint lang-css linenums">
 :root {
-  --header-font: 'Playfair Display', serif;
-  --text-font: 'Poppins', sans-serif;
-  --nav-font: 'Varela Round', sans-serif;
-  --primary-color: #4070ff;
-  --secondary-color: #5983ff;
-  --grey-color: #e0e0e0;
-  --dark-color: #333;
-  --white-color: #fff;
+  --main-font: 'Montserrat', sans-serif;
+  --review-font: 'Mina', sans-serif;
+  --color-primary: #fff;
+  --color-secondary: #E2A000;
+  --background-color: #282828;
 }</pre
             >
           </div>
@@ -352,14 +349,14 @@
         <div>
           All font are located in the images directory
         </div>
-        <a href="font-awesome-url">Font Awesome</a>
+        <!-- <a href="font-awesome-url">Font Awesome</a> -->
         <div>
           &nbsp;
         </div>
 
-        <pre class="prettyprint lang-html linenums">
+        <!-- <pre class="prettyprint lang-html linenums">
           &lt;i class=&quot;fa fa-home&quot;&gt;&lt;i/&gt;
-        </pre>
+        </pre> -->
         <div>
           &nbsp;
         </div>
@@ -385,12 +382,11 @@
       </section>
       <section id="sliders">
         <div class="page-header">
-          <h3>Sliders</h3>
+          <h3>Mobile Carousel</h3>
           <hr class="notop" />
         </div>
         <div>
-          Slick slider is the slider you will find in the content. It's an essay
-          to use lighweight carousel with some decent features.
+          The carousel is a slideshow for cycling through a series of content, built with CSS 3D transforms and a bit of JavaScript. It works with a series of images, text, or custom markup. It also includes support for previous/next controls.
         </div>
         <div>
           &nbsp;
@@ -398,46 +394,76 @@
         <div>
           <div>
             <div>
-              Estate Section slider has class &#39;sliders&#39; and each slide
-              has &#39;&lt;div class=&quot;slider-item&quot;&gt;&#39; wrapper
-              for easy find where slide html code start. If you wont remove some
-              slide just remove div with all content like this &#39;&lt;div
-              class=&quot;item&quot;&gt;&#39;
+              The carousel markup can be gotten easily from the official bootstrap website at https://getbootstrap.com/docs/4.0/components/carousel/
             </div>
             <div>
               &nbsp;
             </div>
           </div>
           <pre class="prettyprint lang-html linenums">
-&lt;!-- Sliders --&gt;
-&lt;div class=&quot;sliders&quot;&gt;
-    &lt;div class=&quot;row home-sliders&quot;&gt;
-      &lt;div class=&quot;col-md-4 slider-item&quot;&gt;
-          &lt;img src=&quot;./assets/images/sliders/house.png&quot; alt=&quot;Exclusive Apartment&quot; class=&quot;img-fluid slider-img&quot; &gt;
-          &lt;div class=&quot;slider-desc p-2 px-3&quot;&gt;
-            &lt;p class=&quot;slider-name m-0&quot;&gt;Exclusive Apartment&quot;/p&gt;
-            &lt;a href=&quot;#&quot; class=&quot;slider-link&quot;&gt;Explore &gt;&quot;/a&gt;
-          &lt;/div&gt;          
+&lt;!-- Mobile Carousel --&gt;
+&lt;div class="d-md-none"&gt;
+  &lt;div
+    id="carouselExampleControls"
+    class="carousel slide"
+    data-ride="carousel"
+  &gt;
+    &lt;div class="carousel-inner"&gt;
+      &lt;div class="carousel-item active"&gt;
+        &lt;img
+          class="d-block img-fluid"
+          src="./assets/img/rev1.svg"
+          alt="First slide"
+          style="margin: 0 auto;"
+        /&gt;
       &lt;/div&gt;
-
-      &lt;div class=&quot;col-md-4 slider-item&quot;&gt;
-            ...
+      &lt;div class="carousel-item"&gt;
+        &lt;img
+          class="d-block img-fluid"
+          src="./assets/img/REV2.svg"
+          alt="Second slide"
+          style="margin: 0 auto;"
+        /&gt;
       &lt;/div&gt;
-
-      &lt;div class=&quot;col-md-4 slider-item&quot;&gt;
-            ...
+      &lt;div class="carousel-item"&gt;
+        &lt;img
+          class="d-block img-fluid"
+          src="./assets/img/REV3.svg"
+          alt="Third slide"
+          style="margin: 0 auto;"
+        /&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-&lt;/section&gt;
-&lt;!-- /.Testimonial --&gt;</pre
+    &lt;a
+      class="carousel-control-prev"
+      href="#carouselExampleControls"
+      role="button"
+      data-slide="prev"
+    &gt;
+  
+      &lt;div style="background: rgba(255, 255, 255, 0.5); border-radius: 50%; height: 30px; width:30px; display:flex; justify-content:center; align-items: center;"
+      &gt; &lt;img src="./assets/img/left.svg" alt=""&gt;&lt;/div&gt;
+      &lt;span class="sr-only"&gt;Previous&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a
+      class="carousel-control-next"
+      href="#carouselExampleControls"
+      role="button"
+      data-slide="next"
+    &gt;
+    
+      &lt;div style="background: rgba(255, 255, 255, 0.5); border-radius: 50%; height: 30px; width:30px; display:flex; justify-content:center; align-items: center;"
+      &gt; &lt;img src="./assets/img/next.svg" alt=""&gt;&lt;/div&gt;
+      &lt;span class="sr-only"&gt;Next&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre
           >
           <div>
             &nbsp;
           </div>
           <div>
-            If you want change option for sliders you need to open
-            assets/js/custom.js and find &#39;// Our Sliders Start&#39; function
-            and set true/false for option what you wont to change
+            If you want change option for carousel you need to go to the bootstrap website above and replace the markup with the your selected option from the website.
           </div>
           <div>
             &nbsp;
@@ -445,7 +471,7 @@
           <div>
             &nbsp;
           </div>
-          <pre class="prettyprint lang-js linenums">
+          <!-- <pre class="prettyprint lang-js linenums">
 // Slick Slider Configuration
 $(document).ready(function () {
   // Homepage Sliders
@@ -479,18 +505,18 @@ $(document).ready(function () {
     ],
   })
 })
-</pre
+</pre -->
           >
         </div>
         <p>
           You can find more documentation here&nbsp;<a
-            href="https://kenwheeler.github.io/slick/"
+            href="https://getbootstrap.com/docs/4.0/components/carousel/"
             target="_blank"
-            >https://kenwheeler.github.io/slick/</a
+            >https://getbootstrap.com/docs/4.0/components/carousel/</a
           >
         </p>
       </section>
-      <section id="google_map">
+      <!-- <section id="google_map">
         <div class="page-header">
           <h3>Google Map</h3>
           <hr class="notop" />
@@ -529,7 +555,7 @@ $(document).ready(function () {
         <pre class="prettyprint lang-html linenums">
           To your preferred Location
         </pre>
-      </section>
+      </section> -->
       <section id="sources_and_credits">
         <div class="page-header">
           <h3>Sources and Credits</h3>
@@ -540,8 +566,8 @@ $(document).ready(function () {
         </div>
         <div>
           <strong>Google Fonts</strong> -
-          <a href="http://www.google.com/webfonts/"
-            >http://www.google.com/webfonts/</a
+          <a href="http://fonts.google.com/"
+            >http://fonts.google.com/</a
           >
         </div>
         <div></div>
@@ -567,24 +593,24 @@ $(document).ready(function () {
           >
         </div>
 
-        <div>
-          <strong>Slick Slider</strong>&nbsp;2 -
+        <!-- <div>
+          <strong>Carousel</strong>&nbsp;2 -
           <a href="https://kenwheeler.github.io/slick/" target="_blank"
             >https://kenwheeler.github.io/slick/</a
           >
-        </div>
-        <div>
+        </div> -->
+        <!-- <div>
           <strong>animate.css</strong> -&nbsp;<a
             href="http://daneden.me/animate"
             >http://daneden.me/animate</a
           >
-        </div>
-        <div>
+        </div> -->
+        <!-- <div>
           <strong>wow.js</strong> -&nbsp;<a
             href="http://mynameismatthieu.com/WOW/"
             >http://mynameismatthieu.com/WOW</a
           >/
-        </div>
+        </div> -->
         <div>
           <strong>jquery.sticky.js</strong> -&nbsp;<a
             href="http://stickyjs.com/"
